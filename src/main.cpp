@@ -4,7 +4,7 @@ and may not be redistributed without written permission.*/
 //Using SDL and standard IO
 #include <SDL.h>
 #include <stdio.h>
-#include "sdlwrapper/SDLLifeTimeHandler.hpp"
+#include "sdlwrapper/SdlGuard.hpp"
 
 
 //Screen dimension constants
@@ -14,7 +14,7 @@ const int SCREEN_HEIGHT = 480;
 
 int main( int argc, char* args[] )
 {
-    sdlwrapper::SDLLifeTimeHandler();
+    sdlwrapper::SdlGuard();
 	//The window we'll be rendering to
 	SDL_Window* window = NULL;
 	
